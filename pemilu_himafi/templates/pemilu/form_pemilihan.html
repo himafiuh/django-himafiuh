@@ -1,0 +1,208 @@
+<!doctype html>
+{% load static %}
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Form Pemilihan Ketua Umum Himafi Tahun 2020/2021</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- <script src="{% static "JSON/data1.json" %}"></script> -->
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="{% static "css/form-validation.css" %}" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <div class="container">
+<div class="py-5 text-center">
+  <img class="d-block mx-auto mb-4" src="https://pbs.twimg.com/profile_images/2611695873/himafi.jpg" alt="" width="200" height="229">
+  <h2>Form Pemilu Himafi 2020/2021</h2>
+  <p class="lead">Harap mengisi form dibawah ini dengan benar untuk melakukan pemilihan Ketua Umum Himpunan Mahasiswa Fisika Universitas Hasanuddin tahun 2020/2021</p>
+</div>
+
+<div class="row">
+  <div class="col-md-8 order-md-1">
+    <h4 class="mb-3">Data Diri Pemilih</h4>
+    <form method="POST" id="getdata">
+        <div class="form-group">
+          <label for="formNama">Nama Lengkap</label>
+          <input type="text" class="form-control" id="formNama" name="Nama" value="" maxlength="50" minlength="1" required>
+          <small class="form-text text-muted">Harap mengisi nama sesuai dengan yang tertera pada Kartu Tanda Penduduk (KTP).</small>
+        </div>
+        <div class="form-group">
+          <label for="formNIK">NIK</label>
+          <input type="text" class="form-control" id="formNIK" name="NIK" value="" maxlength="50" minlength="1" required>
+          <small class="form-text text-muted">Masukkan Nomor Induk KTP anda. Kami tidak akan Menyebarluaskan NIK anda tanpa seizin anda.</small>
+        </div>
+        <div class="form-group">
+          <label for="formNIM">NIM</label>
+          <input type="text" class="form-control" id="formNIM" name="NIM" value="" maxlength="50" minlength="1" required>
+          <small class="form-text text-muted">Masukkan Nomor Induk Mahasiswa anda.</small>
+        </div>
+        <div class="form-group">
+          <label for="formDateBirth">Tanggal Lahir</label>
+          <input type="date" class="form-control" id="formDateBirth" name="TanggalLahir" value="" max="2002-12-31">
+        </div>
+        <div class="form-group">
+          <label for="formAngkatan">Angkatan</label>
+          <select class="custom-select mr-sm-2" id="formAngkatan" name="Angkatan">
+           <option selected>Angkatan</option>
+           <option value="2014">2014</option>
+           <option value="2015">2015</option>
+           <option value="2016">2016</option>
+           <option value="2017">2017</option>
+           <option value="2018">2018</option>
+           <option value="2019">2019</option>
+          </select>
+          <div class="form-check form-check-inline" style="margin-top:10px">
+          <input class="form-check-input" type="radio" name="pilihan" id="nomor1" value="1">
+          <label class="form-check-label" for="nomor1">
+            <div class="card" style="width: 18rem;">
+              <img src="{% static "images/Fiti.jpg" %}" class="card-img-top" alt="kandidat nomor 1">
+              <div class="card-body">
+                <h4 class="card-title" style="text-align:center;">Firdayanti Firman</h4>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class="form-check form-check-inline" style="margin-top:10px">
+          <input class="form-check-input" type="radio" name="pilihan" id="nomor2" value="2" required>
+          <label class="form-check-label" for="nomor2">
+            <div class="card" style="width: 18rem;">
+              <img src="{% static "images/Sahrul.jpg" %}" class="card-img-top" alt="kandidat nomor 1">
+              <div class="card-body">
+                <h4 class="card-title" style="text-align:center;">Syahrul</h4>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class="form-check form-check-inline" style="margin-top:10px">
+          <input class="form-check-input" type="radio" name="pilihan" id="nomor3" value="3">
+          <label class="form-check-label" for="nomor3">
+            <div class="card" style="width: 18rem;">
+              <img src="{% static "images/Azlan.jpg" %}" class="card-img-top" alt="kandidat nomor 1">
+              <div class="card-body">
+                <h4 class="card-title" style="text-align:center;">Muhammad Azlan</h4>
+              </div>
+            </div>
+          </label>
+        </div>
+        </div>
+
+       <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <div class="col-md-4 order-md-2 mb-4">
+    <div class="card" style="width: 18rem;">
+      <img src="{% static "images/Fiti.jpg" %}" class="card-img-top" alt="kandidat nomor 1">
+      <div class="card-body">
+        <h4 class="card-title" style="text-align:center;">Firdayanti Firman</h4>
+        <h5 class="card-title" >VISI</h4>
+        <p class="card-text">visi calon nomor 1</p>
+        <h5 class="card-title">MISI</h5>
+        <p class="card-text">misi calon nomor 1</p>
+      </div>
+    </div>
+    <br>
+    <div class="card" style="width: 18rem;">
+      <img src="{% static "images/Sahrul.jpg" %}" class="card-img-top" alt="kandidat nomor 1">
+      <div class="card-body">
+        <h4 class="card-title" style="text-align:center;">Syahrul</h4>
+        <h5 class="card-title" >VISI</h4>
+        <p class="card-text">visi calon nomor 1</p>
+        <h5 class="card-title">MISI</h5>
+        <p class="card-text">misi calon nomor 1</p>
+      </div>
+    </div>
+    <br>
+    <div class="card" style="width: 18rem;">
+      <img src="{% static "images/Azlan.jpg" %}" class="card-img-top" alt="kandidat nomor 1">
+      <div class="card-body">
+        <h4 class="card-title" style="text-align:center;">Azlan</h4>
+        <h5 class="card-title" >VISI</h4>
+        <p class="card-text">visi calon nomor 1</p>
+        <h5 class="card-title">MISI</h5>
+        <p class="card-text">misi calon nomor 1</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="my-5 pt-5 text-muted text-center text-small">
+  <p class="mb-1">&copy; 2020 Koordinator DPMF Himafi FMIPA Unhas</p>
+</footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="{% static "js/form-validation.js" %}"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+  $('#getdata').on('submit', function(e){
+
+  e.preventDefault();
+
+  $.ajax({
+       type : "POST",
+       url: "ajax-get-pemilihan/",
+       data: {
+        nama : $('#formNama').val(),
+        nik : $('#formNIK').val(),
+        nim : $('#formNIM').val(),
+        tanggal_lahir : $('#formDateBirth').val(),
+        angkatan : $('#formAngkatan').val(),
+        pilihan : $("input[name='pilihan']:checked").val(),
+        csrfmiddlewaretoken: '{{ csrf_token }}',
+        dataType: "json",
+
+       },
+
+       success: function(data){
+          if (data.pesan.length === 6){
+            var a = data.pesan;
+            var b =  "Terimakasih Telah Mendaftar Sebagai pemilih. Password untuk memilih anda yaitu : ";
+            var c = ". Harap simpan password baik-baik karena akan digunakan pada pemilihan. Terima kasih";
+            $('#kiri').html(b);
+            $('#span').html(a);
+            $('#kanan').html(c);
+          }else {
+            var a = data.pesan;
+            $('#span').html(a);
+          }
+
+       },
+
+       failure: function() {
+
+       }
+
+
+   });
+
+
+        });
+  </script>
+</body>
+</html>
